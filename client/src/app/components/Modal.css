@@ -1,0 +1,132 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translate(-50%, -30%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+/* Modal Overlay */
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.2s ease-out;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+/* Modal Content */
+.modal-main {
+  position: fixed;
+  background: #ffffff;
+  width: 90%;
+  max-width: 420px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 28px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-main p {
+  color: #475569;
+  font-size: 1rem;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.modal-main .d-flex {
+  gap: 12px !important;
+}
+
+.modal-main button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.modal-main .btn-warning {
+  background-color: #2563eb;
+  color: white;
+}
+
+.modal-main .btn-warning:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  transform: translateY(-2px);
+}
+
+.modal-main .btn-danger {
+  background-color: #ef4444;
+  color: white;
+}
+
+.modal-main .btn-danger:hover {
+  background-color: #dc2626;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .modal-main {
+    width: 90%;
+    padding: 24px;
+  }
+
+  .modal-main p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-main {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .modal-main .d-flex {
+    flex-direction: column;
+  }
+
+  .modal-main button {
+    width: 100%;
+  }
+}.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}

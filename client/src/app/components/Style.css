@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: max-content;
+}
+
+.Main {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 24px;
+  gap: 20px;
+}
+
+.formNavContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.transactionContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Navigation Bar - Clean Horizontal Design */
+.navigationContainer {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px 24px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.navigationContainer h2 {
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-align: center;
+  color: #2563eb;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 !important;
+}
+
+.nav-list > div {
+  display: flex;
+  align-items: center;
+  gap: 0 !important;
+}
+
+.nav-list h5 {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.nav-list h5:hover {
+  color: #2563eb;
+  background-color: #f0f9ff;
+  transform: translateX(4px);
+}
+
+/* Form Container - Card Style */
+.FormContinaer {
+  width: 100%;
+  max-width: 500px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+  margin: 0 auto;
+}
+
+.FormContinaer h3 {
+  color: #2563eb;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.FormContinaer form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0;
+}
+
+.FormContinaer form .mb-3 {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.FormContinaer .form-label {
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.FormContinaer .form-control,
+.FormContinaer .form-select {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  background-color: #f8fafc;
+}
+
+.FormContinaer .form-control:focus,
+.FormContinaer .form-select:focus {
+  border-color: #2563eb;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.FormContinaer button {
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+}
+
+.FormContinaer .btn-primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.FormContinaer .btn-primary:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.FormContinaer .btn-danger {
+  background-color: #ef4444;
+  color: white;
+  width: auto;
+  max-width: 200px;
+  padding: 8px 16px;
+}
+
+.FormContinaer .btn-danger:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+}
+
+.totals {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .formNavContainer {
+    width: 28%;
+    max-width: 400px;
+  }
+
+  .transactionContainer {
+    width: 70%;
+  }
+
+  .navigationContainer {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .totals {
+    flex-direction: row;
+  }
+}

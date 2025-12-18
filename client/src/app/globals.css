@@ -1,0 +1,202 @@
+:root {
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+  /* Soft Light Dashboard Theme */
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --success-color: #10b981;
+  --danger-color: #ef4444;
+  --warning-color: #f59e0b;
+  --bg-primary: #f8fafc;
+  --bg-card: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-light: #e2e8f0;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+  --foreground-rgb: 30, 41, 59;
+  --background-start-rgb: 248, 250, 252;
+  --background-end-rgb: 248, 250, 252;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+
+    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+    --secondary-glow: linear-gradient(
+      to bottom right,
+      rgba(1, 65, 255, 0),
+      rgba(1, 65, 255, 0),
+      rgba(1, 65, 255, 0.3)
+    );
+
+    --tile-start-rgb: 2, 13, 46;
+    --tile-end-rgb: 2, 5, 19;
+    --tile-border: conic-gradient(
+      #ffffff80,
+      #ffffff40,
+      #ffffff30,
+      #ffffff20,
+      #ffffff10,
+      #ffffff10,
+      #ffffff80
+    );
+
+    --callout-rgb: 20, 20, 20;
+    --callout-border-rgb: 108, 108, 108;
+    --card-rgb: 100, 100, 100;
+    --card-border-rgb: 200, 200, 200;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Bootstrap Button Overrides */
+.btn {
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border: none;
+  border-radius: 8px;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #1d4ed8;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  transform: translateY(-2px);
+  color: white;
+}
+
+.btn-primary:active {
+  background-color: #1e40af;
+}
+
+.btn-warning {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+}
+
+.btn-warning:hover,
+.btn-warning:focus {
+  background-color: #1d4ed8;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  color: white;
+}
+
+.btn-danger {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+}
+
+.btn-danger:hover,
+.btn-danger:focus {
+  background-color: #dc2626;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+  color: white;
+}
+
+.btn-success {
+  background-color: #10b981;
+  color: white;
+}
+
+.btn-success:hover,
+.btn-success:focus {
+  background-color: #059669;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  color: white;
+}
+
+.btn-outline-warning {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+.btn-outline-warning:hover {
+  background-color: #f0f9ff;
+  border-color: #2563eb;
+}
+
+.btn-outline-warning.active {
+  background-color: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+/* Shadow utilities */
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Form Controls */
+.form-control,
+.form-select {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  transition: all 0.2s ease;
+  background-color: #f8fafc;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #2563eb;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-label {
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 8px;
+}
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
