@@ -1,0 +1,1 @@
+A full-stack Expense Tracker web application built using the MERN stack (MongoDB, Express.js, React.js, Node.js) that helps users efficiently manage personal finances by tracking income and expenses in a structured and intuitive way.
